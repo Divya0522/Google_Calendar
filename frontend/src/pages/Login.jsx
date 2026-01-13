@@ -77,7 +77,7 @@ const Login = () => {
           placeholder="password"
         />
 
-        <button type="submit" className="login-btn">
+        <button type="button" className="login-btn">
           {loading ? "Logging in..." : "Login"}
         </button>
         <p style={{ fontSize: "18px", textAlign: "center" }}>

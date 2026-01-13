@@ -91,7 +91,7 @@ const Register = () => {
           placeholder="Password"
         />
 
-        <button type="submit" className="register-btn">
+        <button type="button" className="register-btn">
           {loading ? "Registering..." : "Register"}
         </button>
 
