@@ -1,0 +1,84 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 370px;
+}
+
+.modal label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+.cancel-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #d5d5d5;
+}
+
+.save-btn {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #1669c1;
+}
+
+
+.delete-btn {
+  background: #d93025;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b3261e;
+}
+
+
+textarea, select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+}

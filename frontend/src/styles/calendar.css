@@ -1,0 +1,14 @@
+.create-btn {
+  background-color: #1a73e8; /* Google blue */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.create-btn:hover {
+  background-color: #1669c1;
+}

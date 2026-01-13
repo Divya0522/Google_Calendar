@@ -1,0 +1,39 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Calendar from "./pages/Calendar";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import "./App.css"
+
+const isAuthenticated = () => !!localStorage.getItem("token");
+
+function App() {
+  return (
+    <>
+      <NavBar />
+      <Routes>
+        <Route
+          path="/"
+          element={isAuthenticated() ? <Navigate to="/dashboard" /> : <Home />}
+        />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        <Route
+          path="/dashboard"
+          element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
+        />
+
+        <Route
+          path="/calendar"
+          element={isAuthenticated() ? <Calendar /> : <Navigate to="/login" />}
+        />
+      </Routes>
+    </>
+  );
+}
+
+export default App;

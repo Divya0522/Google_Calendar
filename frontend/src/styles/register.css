@@ -1,0 +1,69 @@
+.register-container{
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.9;
+    border: 2px solid #ccc;
+    margin: auto;
+   
+}
+
+
+
+label {
+    font-size: 18px;
+    padding: 0px;
+}
+
+input[type="text"],
+input[type="pswd"] {
+    margin: 10px 0;
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 7px;
+    border: 2px solid #ccc;
+}
+
+
+.register-btn {
+    border: none;
+    background-color: rgb(50, 109, 186);
+    cursor: pointer;
+    padding: 13px;
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(50, 109, 186);
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.register-btn:hover {
+    background-color: transparent;
+    color: rgb(50, 109, 186);
+}
+
+.login-btn {
+    display: block;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+    border: 2px solid rgb(50, 109, 186);
+    color: rgb(50, 109, 186);
+     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.login-btn:hover {
+    color: white;
+    background-color: rgb(50, 109, 186);
+}
+

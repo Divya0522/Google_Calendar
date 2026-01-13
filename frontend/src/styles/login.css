@@ -1,0 +1,31 @@
+
+.login-container {
+    border: 2px solid #ccc;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    margin-top: 6%;
+    border-radius: 5px;
+    background: white;
+    opacity: 0.9;
+    margin: auto;
+}
+
+
+label {
+    font-size: 18px;
+    padding: 0px;
+}
+
+input[type="text"],
+input[type="password"] {
+    margin: 10px 0;
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 7px;
+    border: 2px solid #ccc;
+}
+
+
+
