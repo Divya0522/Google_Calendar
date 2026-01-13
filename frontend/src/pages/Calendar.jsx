@@ -14,7 +14,7 @@ const Calendar = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [editingEvent, setEditingEvent] = useState(null);
   const [allowDateEdit, setAllowDateEdit] = useState(false);
-  const EVENTS_URL = "http://127.0.0.1:8000/events/";
+  const EVENTS_URL = "https://calendar-backend-5fh6.onrender.com/events/";
   const location = useLocation();
 
 

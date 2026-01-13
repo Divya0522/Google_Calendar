@@ -10,7 +10,7 @@ const Dashboard = () => {
   const navigate=useNavigate();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/events/", {
+    fetch("https://calendar-backend-5fh6.onrender.com/events/", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -48,7 +48,7 @@ const Dashboard = () => {
 const handleDelete = async (id) => {
   if (!window.confirm("Delete this event?")) return;
 
-  await fetch(`http://127.0.0.1:8000/events/${id}`, {
+  await fetch(`https://calendar-backend-5fh6.onrender.com/events/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,

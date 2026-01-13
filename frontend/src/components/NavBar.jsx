@@ -13,7 +13,7 @@ const NavBar = () => {
   useEffect(() => {
     if (!token) return;
 
-    fetch("http://127.0.0.1:8000/users/me", {
+    fetch("https://calendar-backend-5fh6.onrender.com/users/me", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
