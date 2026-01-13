@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/login.css";
 import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../utils/api";
@@ -12,12 +12,6 @@ const Login = () => {
   const [user, setUser] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-  if (localStorage.getItem("token")) {
-    navigate("/dashboard");
-  }
-}, []);
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -83,15 +77,19 @@ const Login = () => {
           placeholder="password"
         />
 
-        <button type="button" className="login-btn">
+        <button type="submit" className="login-btn">
           {loading ? "Logging in..." : "Login"}
         </button>
         <p style={{ fontSize: "18px", textAlign: "center" }}>
           ------- Don't have an account -------
         </p>
-        <button className="register-btn" onClick={() => navigate("/register")}>
-          Register
-        </button>
+       <button
+  type="button"
+  className="register-btn"
+  onClick={() => navigate("/register")}
+>
+  Register
+</button>
       </form>
     </div>
   );

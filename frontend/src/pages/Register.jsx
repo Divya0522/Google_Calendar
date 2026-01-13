@@ -91,16 +91,21 @@ const Register = () => {
           placeholder="Password"
         />
 
-        <button type="button" className="register-btn">
+        <button type="submit" className="register-btn">
           {loading ? "Registering..." : "Register"}
         </button>
 
         <p style={{ fontSize: "18px", textAlign: "center" }}>
           ---------- Already have an account -----------
         </p>
-        <button className="login-btn" onClick={() => navigate("/login")}>
-          Login
-        </button>
+       <button
+  type="button"
+  className="login-btn"
+  onClick={() => navigate("/login")}
+>
+  Login
+</button>
+
       </form>
     </div>
   );
