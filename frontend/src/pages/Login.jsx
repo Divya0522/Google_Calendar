@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "../styles/login.css";
 import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../utils/api";
@@ -12,6 +12,12 @@ const Login = () => {
   const [user, setUser] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+  if (localStorage.getItem("token")) {
+    navigate("/dashboard");
+  }
+}, []);
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
