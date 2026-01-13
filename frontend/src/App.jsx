@@ -19,9 +19,19 @@ function App() {
           element={isAuthenticated() ? <Navigate to="/dashboard" /> : <Home />}
         />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+  path="/login"
+  element={
+    isAuthenticated() ? <Navigate to="/dashboard" /> : <Login />
+  }
+/>
 
+<Route
+  path="/register"
+  element={
+    isAuthenticated() ? <Navigate to="/dashboard" /> : <Register />
+  }
+/>
         <Route
           path="/dashboard"
           element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />}
