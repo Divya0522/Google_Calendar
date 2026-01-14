@@ -3,7 +3,7 @@ import "../styles/login.css";
 import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../utils/api";
 
-const Login = () => {
+const Login = ({login}) => {
   const navigate = useNavigate();
   const initialState = {
     email: "",
@@ -36,12 +36,8 @@ const Login = () => {
       if (!response.ok) {
         throw new Error(data.detail || "Login failed");
       }
-
-      localStorage.setItem("token", data.access_token);
-
-      localStorage.setItem("isLoggedIn", "true");
-
-      navigate("/dashboard"); 
+       login(data.access_token);
+    navigate("/dashboard");
     } catch (err) {
       setError(err.message);
     } finally {

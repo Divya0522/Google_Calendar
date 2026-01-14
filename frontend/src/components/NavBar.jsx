@@ -1,14 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getToken } from "../utils/auth";
+
 import "../styles/navbar.css";
 
-const NavBar = () => {
-  const navigate = useNavigate();
-  const token = getToken();
-
+const NavBar = ({token,logout}) => {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
+
+
 
   useEffect(() => {
     if (!token) return;
@@ -23,11 +22,7 @@ const NavBar = () => {
       .catch(() => setEmail(""));
   }, [token]);
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
-  };
-
+ 
   return (
     <nav className="navbar">
       <h2 className="logo">MyCalendar</h2>
@@ -46,7 +41,7 @@ const NavBar = () => {
                 <div className="dropdown">
                   <p style={{ fontWeight: "bold" }}>{email}</p>
                   <hr />
-                  <p onClick={handleLogout}>Logout</p>
+                  <p onClick={logout}>Logout</p>
                 </div>
               )}
             </div>
